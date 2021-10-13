@@ -14,9 +14,9 @@ const nextConfig = {
     ],
   },
   i18n: {
-    defaultLocale: 'ja',
+    defaultLocale: 'cn',
     localeDetection: false,
-    locales: ['en', 'ja'],
+    locales: ['en', 'ja','cn'],
   },
   pageExtensions: ['ts', 'tsx', 'mdx'],
   rewrites: () => [
