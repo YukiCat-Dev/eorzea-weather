@@ -56,12 +56,12 @@ const Home: NextPage<Props> = ({ messages }) => {
 
       <div className={classes.hero}>
         <Typography color="inherit" component="h1" gutterBottom variant="h3">
-          Eorzea Weather
+          艾欧泽亚天气预报
         </Typography>
 
-        <Link as={`/zones/eureka-hydatos`} href="/zones/[id]" passHref>
+        <Link as={``} href="../" passHref>
           <Button className={classes.button} component="a" variant="contained">
-            Eureka!
+            返回工具列表
           </Button>
         </Link>
       </div>
