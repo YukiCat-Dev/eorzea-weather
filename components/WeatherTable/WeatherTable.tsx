@@ -66,24 +66,22 @@ const WeatherTable: FC<Props> = ({ zoneID }) => {
   const [highlightedWeathers, setHighlightedWeathers] = useState<string[]>([]);
   const { locale } = useLocale();
   const messageFormatter = useMessageFormatter(messages);
-  const weatherTable  = useMemo(() => {
+  const weatherTable = useMemo(() => {
     const eorzeaWeather = new EorzeaWeather(camelCase(zoneID), { locale });
 
     if (eorzeaWeather.validate()) {
       const startTime = getStartTime(new Date()).getTime() - ONE_DAY * 2;
-      return range(
-        startTime,
-        startTime + ONE_DAY * 10,
-        EIGHT_HOURS,
-      ).map((time) => {
-        const startedAt = new Date(time);
-        return {
-          name: eorzeaWeather.getWeather(startedAt),
-          startedAt,
-        };
-      });
+      return range(startTime, startTime + ONE_DAY * 10, EIGHT_HOURS).map(
+        (time) => {
+          const startedAt = new Date(time);
+          return {
+            name: eorzeaWeather.getWeather(startedAt),
+            startedAt,
+          };
+        },
+      );
     }
-  }, [zoneID, locale])
+  }, [zoneID, locale]);
   const classes = useStyles();
 
   const handleFilterChange = useCallback(
@@ -132,23 +130,25 @@ const WeatherTable: FC<Props> = ({ zoneID }) => {
           <TableBody>
             {weatherTable
               ? chunk(weatherTable, 3).map((weatherTableForDay) => (
-                <TableRow key={`row-${weatherTableForDay[0].startedAt}`}>
-                  {weatherTableForDay.map((weather) => (
-                    <WeatherTableCell
-                      highlight={highlightedWeathers.includes(weather.name)}
-                      key={`cell-${weather.startedAt}`}
-                      value={weather}
-                    />
-                  ))}
-                </TableRow>
-              ))
+                  <TableRow
+                    key={`row-${weatherTableForDay[0].startedAt.toString()}`}
+                  >
+                    {weatherTableForDay.map((weather) => (
+                      <WeatherTableCell
+                        highlight={highlightedWeathers.includes(weather.name)}
+                        key={`cell-${weather.startedAt.toString()}`}
+                        value={weather}
+                      />
+                    ))}
+                  </TableRow>
+                ))
               : chunk(range(30), 3).map((values) => (
-                <TableRow key={`row-${values.join(':')}`}>
-                  {values.map((value) => (
-                    <WeatherTableCell key={`cell-${value}`} />
-                  ))}
-                </TableRow>
-              ))}
+                  <TableRow key={`row-${values.join(':')}`}>
+                    {values.map((value) => (
+                      <WeatherTableCell key={`cell-${value}`} />
+                    ))}
+                  </TableRow>
+                ))}
           </TableBody>
         </Table>
       </TableContainer>
