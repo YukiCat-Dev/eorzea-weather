@@ -12,7 +12,7 @@ const ZoneList: FC = () => {
   const zoneList = useZoneList();
 
   return (
-    <Grid container justify="flex-start">
+    <Grid container justifyContent="flex-start">
       {Object.entries(zoneList).map(([label, zones]) => (
         <Grid item key={`grid-${label}`} md={3} sm={4} xs={12}>
           <List
