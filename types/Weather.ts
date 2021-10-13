@@ -1,6 +1,6 @@
 type Weather = {
   name: string;
-  startedAt: string;
+  startedAt: Date;
 };
 
 export default Weather;
