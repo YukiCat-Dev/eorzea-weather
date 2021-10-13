@@ -51,8 +51,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next",
-    "format": "prettier -w './**/*.{json,md,mdx,yml}'",
-    "format-check": "prettier -c './**/*.{json,md,mdx,yml}'",
+    "format": "prettier -w './**/*.{json,md,mdx,yml,tsx,ts}'",
+    "format-check": "prettier -c './**/*.{json,md,mdx,yml,tsx,ts}'",
     "lint": "next lint",
     "start": "next start"
   },
