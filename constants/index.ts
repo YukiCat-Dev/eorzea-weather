@@ -3,7 +3,7 @@ import EorzeaWeather from 'eorzea-weather';
 export const AVAILABLE_LOCALES: Record<string, string> = {
   en: 'English',
   ja: '日本語',
-  cn: '简体中文'
+  cn: '简体中文',
 };
 
 export const EORZEA_ZONE_LIST = [
