@@ -13,7 +13,7 @@
     "clean-css": "^5.2.1",
     "clsx": "^1.1.1",
     "eorzea-time": "^3.0.0",
-    "eorzea-weather": "github:KotoriK/node-eorzea-weather",
+    "eorzea-weather": "github:YukiCat-Dev/node-eorzea-weather",
     "lodash": "^4.17.21",
     "next": "^11.1.2",
     "react": "^17.0.2",
