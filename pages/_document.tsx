@@ -60,7 +60,7 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#2196f3" />
           <link rel="manifest" href="/manifest.json" />
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap"
+            href="https://fonts.googleapis.cnpmjs.org/css?family=Roboto:300,400,500,700&amp;display=swap"
             rel="stylesheet"
           />
           {process.env.NEXT_PUBLIC_GOOGLE_ADCENSE_CLIENT_ID && (
