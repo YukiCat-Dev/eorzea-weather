@@ -57,6 +57,8 @@ class MyDocument extends Document {
       <Html {...helmet.htmlAttributes.toComponent()}>
         <Head>
           <meta charSet="UTF-8" />
+          <meta name="theme-color" content="#2196f3" />
+          <link rel="manifest" href="/manifest.json" />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap"
             rel="stylesheet"

@@ -16,6 +16,7 @@
     "eorzea-weather": "github:YukiCat-Dev/node-eorzea-weather",
     "lodash": "^4.17.21",
     "next": "^11.1.2",
+    "next-pwa": "^5.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",

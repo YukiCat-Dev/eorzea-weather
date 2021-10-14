@@ -1,0 +1,17 @@
+{
+    "name": "艾欧泽亚天气",
+    "short_name": "eorzea-weather",
+    "icons": [
+        {
+            "src": "favicon.ico",
+            "sizes": "128x128",
+            "type": "image/x-icon",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#2196f3",
+    "background_color": "#fafafa",
+    "start_url": "/",
+    "display": "minimal-ui",
+    "orientation": "portrait"
+}
