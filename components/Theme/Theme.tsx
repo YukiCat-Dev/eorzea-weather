@@ -1,6 +1,6 @@
 import blue from '@material-ui/core/colors/blue';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { createTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { createTheme, MuiThemeProvider, responsiveFontSizes } from '@material-ui/core/styles';
 import React, { FC, useMemo } from 'react';
 import { useSettings } from '../../context/settings';
 
@@ -12,12 +12,12 @@ const Theme: FC = ({ children }) => {
     let dark = settings.state.dark;
     if (dark == null) dark = prefersDark;
 
-    return createTheme({
+    return responsiveFontSizes(createTheme({
       palette: {
         type: dark ? 'dark' : 'light',
         primary: blue,
       },
-    });
+    }));
   }, [settings, prefersDark]);
 
   return (
